@@ -1,0 +1,80 @@
+===================
+Arrays
+===================
+
+[
+  345,
+  10.1,
+  10,
+  -10,
+  null,
+  true,
+  false,
+  { "stuff": "good" }
+]
+
+---
+(json
+  (element
+    (array
+      (number)
+      (number)
+      (number)
+      (number)
+      (null)
+      (true)
+      (false)
+      (object
+        (member
+          name: (string)
+          value: (string)
+        )
+      )
+    )
+  )
+)
+
+
+=====================
+String content
+=====================
+
+[
+  "",
+  "abc",
+  "def\n",
+  "ghi\t"
+]
+
+----
+
+(json
+    (element 
+    (array
+        (string)
+        (string)
+        (string)
+        (string)
+    )
+    )
+)
+
+================================
+Top-level numbers
+================================
+
+-1
+
+---
+
+(json (element (number)))
+
+================================
+Top-level null
+================================
+
+null
+
+---
+
+(json (element (null)))
