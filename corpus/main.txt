@@ -94,3 +94,15 @@ Recursive Array
     )
   )
 )
+================================
+Escaped String
+================================
+"asdf\tasdf\f\b\u0020\r\n\r\r"
+
+---
+
+(json
+  (element (
+    string
+  ))
+)
