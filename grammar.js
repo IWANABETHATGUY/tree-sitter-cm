@@ -16,12 +16,16 @@ module.exports = grammar({
       $.null
     ),
     object: $ => seq("{", optional($._members), "}"),
-    _members: $ => seq($.member, repeat(seq( ',', $.member ))),
+    _members: $ => seq($.member, repeat(seq(',', $.member))),
     member: $ => seq(field('name', $.string), ":", field('value', $._value)),
     array: $ => seq(
       '[',
-      $._value,
-      repeat(seq(',', $._value)),
+      optional(
+        seq(
+          $._value,
+          repeat(seq(',', $._value)),
+        )
+      ),
       ']'
     ),
     _digit: $ => /\d/,

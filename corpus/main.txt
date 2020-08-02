@@ -78,3 +78,19 @@ null
 ---
 
 (json (element (null)))
+
+================================
+Recursive Array
+================================
+
+[[]]
+
+---
+
+(json 
+  (element 
+    (array
+      (array)
+    )
+  )
+)
