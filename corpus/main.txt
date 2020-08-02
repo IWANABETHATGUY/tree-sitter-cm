@@ -49,14 +49,14 @@ String content
 ----
 
 (json
-    (element 
+  (element 
     (array
-        (string)
-        (string)
-        (string)
-        (string)
+      (string)
+      (string)
+      (string)
+      (string)
     )
-    )
+  )
 )
 
 ================================
