@@ -1,14 +1,14 @@
 {
   "name": "tree-sitter-cm",
-  "version": "1.0.0",
-  "description": "",
+  "version": "0.0.1",
+  "description": "tree-sitter for c-minus language",
   "main": "index.js",
   "scripts": {
     "pg": "tree-sitter generate && tree-sitter build-wasm && tree-sitter web-ui",
     "test": "tree-sitter test"
   },
-  "author": "",
-  "license": "ISC",
+  "author": "IWANABETHATGUY",
+  "license": "MIT",
   "dependencies": {
     "nan": "^2.14.1"
   }
