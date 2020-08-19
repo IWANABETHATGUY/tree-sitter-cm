@@ -6,9 +6,9 @@ module.exports = grammar({
     program: $ => repeat($._declaration),
     _declaration: $ => choice($.var_declaration, $.function_declaration),
     var_declaration: $ =>
-      seq($.type_specifier, $.identifier, optional(seq("[", $.num_literal, "]")), ';'),
+      seq(field('type', $.type_specifier), field('id', $.identifier), optional(seq("[", $.num_literal, "]")), ';'),
     type_specifier: $ => choice('int', 'void', 'bool'),
-    function_declaration: $ => seq($.type_specifier, $.identifier, $.param_list, $.compound_statement),
+    function_declaration: $ => seq(field('type', $.type_specifier), field('id', $.identifier), $.param_list, $.compound_statement),
     param_list: $ => seq('(', optional(seq($.param, repeat(seq(',', $.param)))), ')'),
     param: $ => seq($.type_specifier, $.identifier, optional(seq('[', ']'))),
     compound_statement: $ => seq('{', optional(repeat($.var_declaration)), optional(repeat($._statement)), '}'),
