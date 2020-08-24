@@ -603,6 +603,10 @@
         {
           "type": "SYMBOL",
           "name": "num_literal"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "boolean_literal"
         }
       ]
     },
@@ -735,6 +739,19 @@
     "num_literal": {
       "type": "PATTERN",
       "value": "\\d+"
+    },
+    "boolean_literal": {
+      "type": "CHOICE",
+      "members": [
+        {
+          "type": "STRING",
+          "value": "true"
+        },
+        {
+          "type": "STRING",
+          "value": "false"
+        }
+      ]
     }
   },
   "extras": [
