@@ -1,1 +1,0 @@
-cmd_Release/obj.target/tree_sitter_cm.node := g++ -shared -pthread -rdynamic -m64  -Wl,-soname=tree_sitter_cm.node -o Release/obj.target/tree_sitter_cm.node -Wl,--start-group Release/obj.target/tree_sitter_cm/src/parser.o Release/obj.target/tree_sitter_cm/src/binding.o -Wl,--end-group 
